@@ -1,4 +1,10 @@
 <div>
-  <input type="text" [(ngModel)]="query" placeholder="Enter a word" />
+  <input
+    type="text"
+    [(ngModel)]="query"
+    placeholder="Enter a word"
+    (ngModelChange)="queryInvalid = false"
+  />
   <button (click)="onSearch()">Search</button>
+  <p *ngIf="queryInvalid" style="color: red">Query cannot be empty.</p>
 </div>

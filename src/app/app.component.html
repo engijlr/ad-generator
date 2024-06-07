@@ -9,5 +9,8 @@
     [currentPage]="currentPage"
     [totalPages]="totalPages"
     (nextClicked)="nextPage()"
+    [selectedImageIndex]="selectedImageIndex"
+    (imageSelected)="selectImage($event)"
   />
+  <display-image [selectedImage]="selectedImage" />
 </div>

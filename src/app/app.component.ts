@@ -3,8 +3,10 @@ import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { SearchInputComponent } from './search-input/search-input.component';
 import { UnsplashApiService } from './services/unsplash-api.service';
+
 import { ImagesResultsComponent } from './images-results/images-results.component';
 import { CategoryListComponent } from './category-list/category-list.component';
+import { DisplayImageComponent } from './display-image/display-image.component';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +17,7 @@ import { CategoryListComponent } from './category-list/category-list.component';
     SearchInputComponent,
     ImagesResultsComponent,
     CategoryListComponent,
+    DisplayImageComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
@@ -25,6 +28,8 @@ export class AppComponent {
   searchPerformed: boolean = false;
   currentPage: number = 1;
   totalPages: number = 1;
+  selectedImageIndex: number | null = null;
+  selectedImage: any = null;
 
   constructor(private imageService: UnsplashApiService) {}
 
@@ -58,5 +63,11 @@ export class AppComponent {
     if (this.currentPage > 1) {
       this.goToPage(this.currentPage - 1);
     }
+  }
+
+  selectImage(index: number) {
+    this.selectedImageIndex = index;
+    this.selectedImage = this.images[index];
+    console.log(this.selectedImage);
   }
 }

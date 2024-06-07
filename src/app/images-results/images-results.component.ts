@@ -13,16 +13,23 @@ export class ImagesResultsComponent {
   @Input() images: any[] = [];
   @Input() currentPage = 1;
   @Input() totalPages = 1;
+  @Input() selectedImageIndex: number | null = null;
 
   @Output() prevClicked = new EventEmitter<void>();
   @Output() nextClicked = new EventEmitter<void>();
+  @Output() imageSelected = new EventEmitter<number>();
 
   onPrevClicked() {
     this.prevClicked.emit();
+    this.selectedImageIndex = null;
   }
 
   onNextClicked() {
     this.nextClicked.emit();
-    console.log('next');
+    this.selectedImageIndex = null;
+  }
+
+  selectImage(index: number) {
+    this.imageSelected.emit(index);
   }
 }
