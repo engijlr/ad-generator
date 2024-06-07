@@ -1,6 +1,7 @@
 <div class="wrapper">
   <h1>Results for: {{ searchQuery }}</h1>
   <search-input (search)="onSearch($event)"></search-input>
+  <category-list (categorySelected)="onSearch($event)" />
   <images-results
     [isSearchPerformed]="searchPerformed"
     [images]="images"

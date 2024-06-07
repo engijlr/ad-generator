@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { SearchInputComponent } from './search-input/search-input.component';
 import { UnsplashApiService } from './services/unsplash-api.service';
 import { ImagesResultsComponent } from './images-results/images-results.component';
+import { CategoryListComponent } from './category-list/category-list.component';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,7 @@ import { ImagesResultsComponent } from './images-results/images-results.componen
     CommonModule,
     SearchInputComponent,
     ImagesResultsComponent,
+    CategoryListComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
