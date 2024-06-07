@@ -1,0 +1,43 @@
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 250px);
+  gap: 10px;
+}
+
+.image-grid div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.image-grid div.selected {
+  border: 2px solid red;
+}
+
+.image-grid img {
+  height: 100%;
+  width: auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination-controls button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.pagination-controls span {
+  font-size: 16px;
+}

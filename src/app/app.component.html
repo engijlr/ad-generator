@@ -1,4 +1,12 @@
 <div class="wrapper">
   <h1>Results for: {{ searchQuery }}</h1>
   <search-input (search)="onSearch($event)"></search-input>
+  <images-results
+    [isSearchPerformed]="searchPerformed"
+    [images]="images"
+    (prevClicked)="prevPage()"
+    [currentPage]="currentPage"
+    [totalPages]="totalPages"
+    (nextClicked)="nextPage()"
+  />
 </div>

@@ -1,0 +1,22 @@
+<div *ngIf="isSearchPerformed">
+  <div *ngIf="images.length > 0">
+    <h2>Search Results:</h2>
+    <div class="image-grid">
+      <div *ngFor="let image of images; let i = index">
+        <img [src]="image.urls.thumb" [alt]="image.alt_description" />
+      </div>
+    </div>
+    <div class="pagination-controls">
+      <button (click)="onPrevClicked()" [disabled]="currentPage === 1">
+        Previous
+      </button>
+      <span>Page {{ currentPage }} of {{ totalPages }}</span>
+      <button (click)="onNextClicked()" [disabled]="currentPage === totalPages">
+        Next
+      </button>
+    </div>
+  </div>
+  <div *ngIf="images.length === 0">
+    <p>No images found.</p>
+  </div>
+</div>
