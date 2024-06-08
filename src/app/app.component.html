@@ -1,16 +1,28 @@
-<div class="wrapper">
-  <h1>Results for: {{ searchQuery }}</h1>
-  <search-input (search)="onSearch($event)"></search-input>
-  <category-list (categorySelected)="onSearch($event)" />
-  <images-results
+<div class="main-wrapper">
+  <div class="main-search column full-center">
+    <div>
+      <img src="AdPlenty-logo.png" alt="Adplenty logo" />
+      <h1>Social Media Image Generator</h1>
+      <p>Search by name or choose a category</p>
+    </div>
+    <search-input (search)="onSearch($event)" />
+    <category-list (categorySelected)="onSearch($event)" />
+
+    <images-results
+      [isSearchPerformed]="searchPerformed"
+      [images]="images"
+      (prevClicked)="prevPage()"
+      [currentPage]="currentPage"
+      [totalPages]="totalPages"
+      (nextClicked)="nextPage()"
+      [selectedImageIndex]="selectedImageIndex"
+      (imageSelected)="selectImage($event)"
+    />
+  </div>
+
+  <display-image
+    [selectedImage]="selectedImage"
+    *ngIf="searchPerformed"
     [isSearchPerformed]="searchPerformed"
-    [images]="images"
-    (prevClicked)="prevPage()"
-    [currentPage]="currentPage"
-    [totalPages]="totalPages"
-    (nextClicked)="nextPage()"
-    [selectedImageIndex]="selectedImageIndex"
-    (imageSelected)="selectImage($event)"
   />
-  <display-image [selectedImage]="selectedImage" />
 </div>

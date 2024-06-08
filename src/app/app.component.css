@@ -1,0 +1,56 @@
+.main-wrapper {
+  display: flex;
+  height: 100%;
+  padding: 0;
+}
+
+.main-wrapper .main-search {
+  gap: 24px;
+  width: 100%;
+  padding: 24px;
+}
+
+.main-search div {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-search img {
+  margin-bottom: 8px;
+  width: 130px;
+  align-self: center;
+}
+
+.main-wrapper h1 {
+  color: var(--brand-color);
+  font-size: 28px;
+  margin-bottom: 7px;
+  text-align: center;
+}
+.main-wrapper p {
+  text-align: center;
+  font-size: 14px;
+}
+
+search-input {
+  display: flex;
+  width: 900px;
+  overflow: hidden;
+  position: relative;
+}
+
+category-list {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  justify-content: center;
+}
+
+images-results {
+  width: 100%;
+}
+
+display-image {
+  width: 30vw;
+  min-width: 380px;
+}

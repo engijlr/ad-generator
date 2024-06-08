@@ -1,28 +1,39 @@
 .image-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 250px);
-  gap: 10px;
+  grid-template-rows: repeat(2, 300px);
+  gap: 18px;
 }
 
 .image-grid div {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  gap: 12px;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 6px;
+  box-sizing: border-box;
   cursor: pointer;
+  border: 1px solid #dddddd;
+  padding: 10px;
 }
 
 .image-grid div.selected {
-  border: 2px solid red;
+  border: 2px solid var(--brand-color);
+}
+
+.image-grid div section p {
+  font-weight: 500;
+  font-size: 12px;
+}
+.image-grid div section span {
+  color: #585858;
+  font-size: 12px;
 }
 
 .image-grid img {
-  height: 100%;
-  width: auto;
   border-radius: 8px;
-  object-fit: contain;
+  height: 80%;
+  object-fit: cover;
 }
 
 .pagination-controls {

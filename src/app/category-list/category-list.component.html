@@ -1,9 +1,7 @@
-<div class="category-buttons">
-  <button
-    *ngFor="let category of categories"
-    class="category-button"
-    (click)="onClick(category)"
-  >
-    {{ category }}
-  </button>
-</div>
+<button
+  *ngFor="let category of categories"
+  (click)="onClick(category)"
+  [class.selected]="isSelected(category)"
+>
+  {{ category }}
+</button>

@@ -1,3 +1,9 @@
-<div *ngIf="selectedImage">
-  <img [src]="selectedImage.urls.thumb" [alt]="selectedImage.alt_description" />
+<div *ngIf="isSearchPerformed">
+  <!--<img [src]="selectedImage.urls.thumb" [alt]="selectedImage.alt_description" />-->
+  <img src="insta-mockup.png" alt="instagram frame" />
+  <img
+    *ngIf="selectedImage"
+    [src]="selectedImage.url"
+    [alt]="selectedImage.alt_description"
+  />
 </div>

@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 :root {
   --bg-color: white;
-  --header-color: white;
+  --brand-color: #f06435;
   --border-color: rgb(230, 230, 230);
+  --hover-color: rgba(240, 100, 53, 0.16);
 }
 
 html,
@@ -17,9 +19,15 @@ h4 {
 }
 
 html,
-body,
+body {
+  font-family: "Outfit", sans-serif;
+  height: 100vh;
+}
 app-root {
-  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
 }
 
 .row {

@@ -20,9 +20,15 @@ export class CategoryListComponent {
     'Vet',
   ];
 
+  selectedCategory: string | null = null;
+
   @Output() categorySelected = new EventEmitter<string>();
 
   onClick(selectedQuery: string) {
+    this.selectedCategory = selectedQuery;
     this.categorySelected.emit(selectedQuery);
+  }
+  isSelected(category: string): boolean {
+    return this.selectedCategory === category;
   }
 }

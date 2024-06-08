@@ -18,7 +18,12 @@ export class UnsplashApiService {
 
     return this.http.get(this.apiUrl, {
       headers: headers,
-      params: { query: query, page: page, per_page: '8' },
+      params: {
+        query: query,
+        page: page,
+        per_page: '8',
+        orientation: 'portrait',
+      },
     });
   }
 }
