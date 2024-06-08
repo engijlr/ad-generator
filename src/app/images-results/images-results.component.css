@@ -1,7 +1,7 @@
 .image-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 300px);
+  grid-template-rows: repeat(2, auto);
   gap: 18px;
 }
 

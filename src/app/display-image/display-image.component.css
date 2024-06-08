@@ -3,10 +3,36 @@ div {
   background-color: #fde6df;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-img {
-  height: 20%;
+.frame {
+  width: 330px;
+  height: 600px;
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.frame img {
+  width: 100%;
+}
+
+.selected-img {
+  width: 326px;
+  height: 409px;
+  z-index: 2;
+  position: absolute;
+  top: 46px;
+}
+
+button {
+  border: none;
+  padding: 8px 20px;
+  background-color: var(--brand-color);
+  color: white;
+  border-radius: 4px;
+  margin-top: 8px;
+  font-size: 14px;
 }

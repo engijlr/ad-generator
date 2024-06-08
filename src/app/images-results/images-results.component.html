@@ -6,13 +6,12 @@
         (click)="selectImage(i)"
         [class.selected]="i === selectedImageIndex"
       >
-        <img [src]="image.url" [alt]="image.alt" />
+        <!-- <img [src]="image.url" [alt]="image.alt" /> -->
+        <img [src]="image.urls.thumb" [alt]="image.alt_description" />
         <section>
-          <p>Category</p>
-          <span>{{ image.alt }}</span>
+          <p>{{ seletedCategory }}</p>
+          <span>{{ image.alt_description }}</span>
         </section>
-
-        <!-- <img [src]="image.urls.thumb" [alt]="image.alt_description" /> -->
       </div>
     </div>
     <div class="pagination-controls">

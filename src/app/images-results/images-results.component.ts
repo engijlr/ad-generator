@@ -14,6 +14,7 @@ export class ImagesResultsComponent {
   @Input() currentPage = 1;
   @Input() totalPages = 1;
   @Input() selectedImageIndex: number | null = null;
+  @Input() seletedCategory: string = '';
 
   @Output() prevClicked = new EventEmitter<void>();
   @Output() nextClicked = new EventEmitter<void>();

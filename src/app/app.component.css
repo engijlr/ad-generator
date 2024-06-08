@@ -51,6 +51,9 @@ images-results {
 }
 
 display-image {
-  width: 30vw;
-  min-width: 380px;
+  width: 40vw;
+  min-width: 450px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
 }

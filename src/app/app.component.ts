@@ -31,57 +31,57 @@ export class AppComponent {
   selectedImageIndex: number | null = null;
   selectedImage: any = null;
 
-  //constructor(private imageService: UnsplashApiService) {}
+  constructor(private imageService: UnsplashApiService) {}
 
   onSearch(query: string, page = 1) {
     this.searchQuery = query;
     this.searchPerformed = true;
     this.currentPage = page;
 
-    this.images = [
-      {
-        url: 'https://images.unsplash.com/photo-1717457779768-b93ca50327bf?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        alt: 'Image 1',
-      },
-      {
-        url: 'https://plus.unsplash.com/premium_photo-1669279283156-7cca8ccba55c?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        alt: 'Image 2',
-      },
-      {
-        url: 'https://plus.unsplash.com/premium_photo-1669279283156-7cca8ccba55c?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        alt: 'Image 3',
-      },
-      {
-        url: 'https://plus.unsplash.com/premium_photo-1669279283156-7cca8ccba55c?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        alt: 'Image 4',
-      },
-      {
-        url: 'https://plus.unsplash.com/premium_photo-1669279283156-7cca8ccba55c?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        alt: 'Image 5',
-      },
-      {
-        url: 'https://plus.unsplash.com/premium_photo-1669279283156-7cca8ccba55c?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        alt: 'Image 6',
-      },
-      {
-        url: 'https://plus.unsplash.com/premium_photo-1669279283156-7cca8ccba55c?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        alt: 'Image 7',
-      },
-      {
-        url: 'https://plus.unsplash.com/premium_photo-1669279283156-7cca8ccba55c?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        alt: 'Image 8',
-      },
-    ];
+    // this.images = [
+    //   {
+    //     url: 'https://images.unsplash.com/photo-1717457779768-b93ca50327bf?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    //     alt: 'Image 1',
+    //   },
+    //   {
+    //     url: 'https://plus.unsplash.com/premium_photo-1669279283156-7cca8ccba55c?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    //     alt: 'Image 2',
+    //   },
+    //   {
+    //     url: 'https://plus.unsplash.com/premium_photo-1669279283156-7cca8ccba55c?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    //     alt: 'Image 3',
+    //   },
+    //   {
+    //     url: 'https://plus.unsplash.com/premium_photo-1669279283156-7cca8ccba55c?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    //     alt: 'Image 4',
+    //   },
+    //   {
+    //     url: 'https://plus.unsplash.com/premium_photo-1669279283156-7cca8ccba55c?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    //     alt: 'Image 5',
+    //   },
+    //   {
+    //     url: 'https://plus.unsplash.com/premium_photo-1669279283156-7cca8ccba55c?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    //     alt: 'Image 6',
+    //   },
+    //   {
+    //     url: 'https://plus.unsplash.com/premium_photo-1669279283156-7cca8ccba55c?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    //     alt: 'Image 7',
+    //   },
+    //   {
+    //     url: 'https://plus.unsplash.com/premium_photo-1669279283156-7cca8ccba55c?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    //     alt: 'Image 8',
+    //   },
+    // ];
 
-    //   this.imageService.searchImages(query, page).subscribe(
-    //     (response: any) => {
-    //       this.images = response.results;
-    //       this.totalPages = response.total_pages;
-    //     },
-    //     (error) => {
-    //       console.error('Error fetching images:', error);
-    //     }
-    //   );
+    this.imageService.searchImages(query, page).subscribe(
+      (response: any) => {
+        this.images = response.results;
+        this.totalPages = response.total_pages;
+      },
+      (error) => {
+        console.error('Error fetching images:', error);
+      }
+    );
   }
 
   goToPage(page: number) {
