@@ -35,19 +35,18 @@ export class AppComponent {
 
   onSearch(query: string, page = 1) {
     this.searchQuery = query;
-
     this.currentPage = page;
 
     this.imageService.searchImages(query, page).subscribe(
       (response: any) => {
         this.images = response.results;
         this.totalPages = response.total_pages;
+        this.searchPerformed = true;
       },
       (error) => {
         console.error('Error fetching images:', error);
       }
     );
-    this.searchPerformed = true;
   }
 
   goToPage(page: number) {
