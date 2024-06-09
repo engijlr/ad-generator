@@ -10,7 +10,7 @@
   padding: 24px;
 }
 
-.main-search div {
+.main-search header {
   display: flex;
   flex-direction: column;
 }
@@ -34,6 +34,7 @@
 
 search-input {
   display: flex;
+  flex-direction: column;
   width: 900px;
   overflow: hidden;
   position: relative;
@@ -50,7 +51,7 @@ images-results {
   width: 100%;
 }
 
-display-image {
+.display-image {
   width: 40vw;
   min-width: 450px;
   position: sticky;

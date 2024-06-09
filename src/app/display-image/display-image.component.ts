@@ -11,4 +11,5 @@ import { Component, Input } from '@angular/core';
 export class DisplayImageComponent {
   @Input() selectedImage: any = null;
   @Input() isSearchPerformed = false;
+  @Input() foundImages: any[] = [];
 }

@@ -18,6 +18,11 @@ h4 {
   box-sizing: border-box;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
 html,
 body {
   font-family: "Outfit", sans-serif;

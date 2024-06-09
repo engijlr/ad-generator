@@ -1,5 +1,5 @@
-<div *ngIf="isSearchPerformed">
-  <div class="frame">
+<section *ngIf="isSearchPerformed">
+  <figure class="frame">
     <img src="insta-mockup.png" alt="instagram frame" />
     <img
       [src]="selectedImage.urls.thumb"
@@ -7,14 +7,8 @@
       *ngIf="selectedImage"
       class="selected-img"
     />
-    <!-- <img
-      *ngIf="selectedImage"
-      [src]="selectedImage.url"
-      [alt]="selectedImage.alt_description"
-      class="selected-img"
-    /> -->
-  </div>
+  </figure>
 
-  <span>Want to use this ad for your business?</span>
-  <button>Generate Ad</button>
-</div>
+  <p>Want to use this ad for your business?</p>
+  <button><a href="https://engiberlozada.com/">Generate Ad</a></button>
+</section>

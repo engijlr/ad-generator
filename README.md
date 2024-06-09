@@ -1,27 +1,56 @@
-# AdGenerator
+# Social Media Image Generator
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.2.
+Welcome to the Social Media Image Generator! This application helps users create Instagram advertisements by searching for images from the Unsplash API and selecting templates for their business.
 
-## Development server
+## Table of Contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Running the App](#running-the-app)
+- [Contributing](#contributing)
 
-## Code scaffolding
+## Introduction
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The Social Media Image Generator is designed to help users quickly create Instagram ads. Users can search for images by category or keyword, select from a list of templates, and generate posts ready to be published on Instagram.
 
-## Build
+## Features
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Search for images using the Unsplash API
+- Select and preview images in a template
+- Generate Instagram-ready posts
+- Environment-specific configurations for development, staging, and production
 
-## Running unit tests
+## Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone the repository:
 
-## Running end-to-end tests
+```bash
+git clone https://github.com/yourusername/social-media-image-generator.git
+cd social-media-image-generator
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2. Install dependencies:
 
-## Further help
+```bash
+npm install
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Running the App
+
+1. Start the development server:
+
+```bash
+ng serve
+```
+
+The app will be available at http://localhost:4200.
+
+## Contributing
+
+1. Fork the repository
+2. Create a new branch (git checkout -b feature/your-feature)
+3. Make your changes
+4. Commit your changes (git commit -m 'Add some feature')
+5. Push to the branch (git push origin feature/your-feature)
+6. Create a pull request

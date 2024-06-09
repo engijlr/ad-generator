@@ -5,7 +5,7 @@
   gap: 18px;
 }
 
-.image-grid div {
+.image-grid article {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -15,40 +15,96 @@
   cursor: pointer;
   border: 1px solid #dddddd;
   padding: 10px;
+  position: relative;
 }
 
-.image-grid div.selected {
+.image-grid article.selected {
   border: 2px solid var(--brand-color);
 }
 
-.image-grid div section p {
+.image-grid article section p {
   font-weight: 500;
   font-size: 12px;
 }
-.image-grid div section span {
+.image-grid article section span {
   color: #585858;
   font-size: 12px;
 }
 
 .image-grid img {
   border-radius: 8px;
-  height: 80%;
+  height: 85%;
   object-fit: cover;
+}
+
+.image-grid .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 6px;
+}
+
+.image-grid article:hover .overlay {
+  opacity: 1;
+}
+
+.image-grid .overlay {
+  color: white;
+  text-align: center;
+}
+
+.image-grid .overlay p {
+  margin: 0;
+  padding: 5px;
 }
 
 .pagination-controls {
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   margin-top: 20px;
+  gap: 10px;
 }
 
 .pagination-controls button {
-  margin: 0 10px;
-  padding: 10px 20px;
-  font-size: 16px;
+  border: none;
+  padding: 8px 16px;
+  background-color: var(--brand-color);
+  color: white;
+  border-radius: 4px;
+  margin-top: 8px;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 .pagination-controls span {
   font-size: 16px;
+  color: #767070;
+}
+
+.error-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.error-message img {
+  width: 120px;
+}
+
+.error-message p {
+  font-size: 24px;
+}
+.error-message span {
+  font-size: 16px;
+  color: #585858;
 }

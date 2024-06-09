@@ -1,20 +1,20 @@
-<div *ngIf="isSearchPerformed">
-  <div *ngIf="images.length > 0">
+<section *ngIf="isSearchPerformed">
+  <section *ngIf="images.length > 0">
     <div class="image-grid">
-      <div
+      <article
         *ngFor="let image of images; let i = index"
         (click)="selectImage(i)"
         [class.selected]="i === selectedImageIndex"
       >
-        <!-- <img [src]="image.url" [alt]="image.alt" /> -->
         <img [src]="image.urls.thumb" [alt]="image.alt_description" />
+        <div class="overlay"><p>Choose template</p></div>
         <section>
           <p>{{ seletedCategory }}</p>
           <span>{{ image.alt_description }}</span>
         </section>
-      </div>
+      </article>
     </div>
-    <div class="pagination-controls">
+    <nav class="pagination-controls">
       <button (click)="onPrevClicked()" [disabled]="currentPage === 1">
         Previous
       </button>
@@ -22,9 +22,11 @@
       <button (click)="onNextClicked()" [disabled]="currentPage === totalPages">
         Next
       </button>
-    </div>
-  </div>
-  <div *ngIf="images.length === 0">
-    <p>No images found.</p>
-  </div>
-</div>
+    </nav>
+  </section>
+  <section *ngIf="images.length === 0" class="error-message">
+    <img src="not-found.png" alt="not found image" />
+    <p>Whoa!</p>
+    <span>We have not found any results. Try again!</span>
+  </section>
+</section>
